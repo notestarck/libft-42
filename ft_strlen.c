@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:29:01 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 08:33:42 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 08:50:03 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (*str < '\0')
+	while (*str != '\0')
+	{
+		str++;
 		i++;
+	}
 	return (i);
 }

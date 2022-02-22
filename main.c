@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 18:02:35 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 09:02:05 by estarck          ###   ########.fr       */
+/*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
+/*   Updated: 2022/02/22 08:47:39 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include <string.h>
+#include <stdio.h>
+
+
+int ft_strlen(char *str);
+
+int main(void)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
+	char	*str = "Vive le vent !";
+	printf("%d\n", ft_strlen(str));
+	printf("%lu\n", strlen(str));
 	return (0);
 }
