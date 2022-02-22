@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 15:21:13 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 16:37:23 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int main(void)
     printf("After bzero(manu):  %s\n", str2);
 	*/
 
+	/*
 	char str1[50] = "GeeksForGeeks is for programming geeks.";
 	char str2[50] = "";
     printf("\nBefore bzero(): %s\n", str2);
@@ -69,4 +70,19 @@ int main(void)
     printf("\nBefore bzero(): %s\n", str4);
     ft_memcpy(str3, str4, 6);
     printf("After bzero(manu):  %s\n", str4);	
+	*/
+
+	char str1[] = "Geeks";  
+	char str2[] = "Quiz";  
+  
+	puts("str1 before memcpy ");
+	puts(str1);
+  
+	ft_memcpy (str1, str2, sizeof(str2));
+  
+	puts("\nstr1 after memcpy ");
+	puts(str1);
+	printf("%p", memcpy (str1, str2, sizeof(str2)));
+  
+	return 0;
 }
