@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 08:29:01 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 10:46:45 by estarck          ###   ########.fr       */
+/*   Created: 2022/02/22 12:06:18 by estarck           #+#    #+#             */
+/*   Updated: 2022/02/22 12:20:07 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	int				i;
+	unsigned char	*d;
 
 	i = 0;
-	while (*str != '\0')
-	{
-		str++;
-		i++;
-	}
-	return (i);
+	d = (unsigned char *)s;
+	if (n <= 0)
+		return ;
+	while (i < n)
+		d[i++] = 0;
 }
