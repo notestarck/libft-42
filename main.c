@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 14:45:03 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 15:21:13 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 size_t ft_strlen(char *str);
 void	*ft_memset(void *str, char c, int bytes);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 int main(void)
 {
@@ -45,6 +46,7 @@ int main(void)
 	*/
 
  
+ 	/*
 	char str1[50] = "GeeksForGeeks is for programming geeks.";
     printf("\nBefore bzero(): %s\n", str1);
     bzero(str1 + 13, 2);
@@ -54,4 +56,17 @@ int main(void)
     printf("\nBefore bzero(): %s\n", str2);
     ft_bzero(str2 + 13, 2*sizeof(char));
     printf("After bzero(manu):  %s\n", str2);
+	*/
+
+	char str1[50] = "GeeksForGeeks is for programming geeks.";
+	char str2[50] = "";
+    printf("\nBefore bzero(): %s\n", str2);
+    memcpy(str1, str2, 6);
+    printf("After bzero(string):  %s\n", str2);
+
+	char str3[50] = "GeeksForGeeks is for programming geeks.";
+	char str4[50] = "";
+    printf("\nBefore bzero(): %s\n", str4);
+    ft_memcpy(str3, str4, 6);
+    printf("After bzero(manu):  %s\n", str4);	
 }

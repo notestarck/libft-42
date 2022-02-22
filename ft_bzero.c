@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:06:18 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 15:11:17 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 15:23:28 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_bzero(void *s, size_t n)
 	if (n <= 0)
 		return ;
 	while (i < n)
-		d[i++] = 0;
+		d[i++] = '\0';
 }
