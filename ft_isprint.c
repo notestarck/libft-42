@@ -6,11 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:02:35 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/21 18:13:26 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 08:27:19 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 127)
 		return (1);
