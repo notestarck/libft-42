@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 12:27:12 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:45:03 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,14 @@ int main(void)
 	printf("%p\n", memset(str1 + 13, '.', 8*sizeof(char)));
 	*/
 
+ 
 	char str1[50] = "GeeksForGeeks is for programming geeks.";
     printf("\nBefore bzero(): %s\n", str1);
-    bzero(str1 + 13, 8*sizeof(char));
+    bzero(str1 + 13, 2);
     printf("After bzero(string):  %s\n", str1);
 
 	char str2[50] = "GeeksForGeeks is for programming geeks.";
     printf("\nBefore bzero(): %s\n", str2);
-    ft_bzero(str2 + 13, 8*sizeof(char));
+    ft_bzero(str2 + 13, 2*sizeof(char));
     printf("After bzero(manu):  %s\n", str2);
 }
