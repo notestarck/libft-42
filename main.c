@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 20:00:08 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/22 20:05:45 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 int main(void)
 {
@@ -102,8 +103,16 @@ int main(void)
 	puts(str1);
  	 */
 
+	 /*
 	char c = '2';
 	printf("%d", ft_toupper(c));
 
 	return 0;
+	*/
+
+	char c = 'E';
+	printf("%d", ft_tolower(c));
+
+	return 0;
+
 }
