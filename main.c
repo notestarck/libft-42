@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 13:41:39 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 15:28:07 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <ctype.h>
+#include <assert.h>
 
 
 size_t ft_strlen(char *str);
@@ -26,6 +27,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char 	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 int main(void)
 {
@@ -92,7 +94,7 @@ int main(void)
 	printf("%p", memcpy (str1, str2, 2));
 	*/
 	 
-	
+	/*
 	char str1[] = "salut tout le monde";  
 	char str2[] = "Quiz";  
   
@@ -104,6 +106,7 @@ int main(void)
 	puts("\nstr1 after memmove ");
 	puts(str1);
 	return (0);
+	*/
 
 	 /*
 	char c = '2';
@@ -134,4 +137,14 @@ int main(void)
 	printf("%p", memchr(str, c, 8));
 	return (0);
 	*/
+
+	int array1 [] = { 54, 85, 22, 63, 21 };
+    int array2 [] = { 54, 85, 19, 63, 21 };
+	//char array1[] = "abrdez";
+	//char array2[] = "abcdee";
+
+	printf("%d\n", ft_memcmp(array1, array2, 12));
+	printf("%d\n", memcmp(array1, array2, 12));
+    
+    return 0;
 }
