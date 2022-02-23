@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 16:42:44 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 16:49:39 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stddef.h>
 #include <ctype.h>
 #include <assert.h>
+#include <stdlib.h>
 
 
 size_t ft_strlen(char *str);
@@ -28,8 +29,9 @@ int		ft_tolower(int c);
 char 	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int	ft_atoi(const char *str);
 
-int main(void)
+int main(int argc, char **argv)
 {
 	/*
 	char	*str = "Vive le vent !";
@@ -138,6 +140,7 @@ int main(void)
 	return (0);
 	*/
 
+	/*
 	int array1 [] = { 54, 85, 22, 63, 21 };
     int array2 [] = { 54, 85, 19, 63, 21 };
 	//char array1[] = "abrdez";
@@ -145,6 +148,11 @@ int main(void)
 
 	printf("%d\n", ft_memcmp(array1, array2, 12));
 	printf("%d\n", memcmp(array1, array2, 12));
+	*/
+
+		printf("%d\n", ft_atoi(argv[1]));
+		printf("%d\n", atoi(argv[1]));
+	
     
     return 0;
 }
