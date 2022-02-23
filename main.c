@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 17:28:39 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 17:49:03 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 int main(int argc, char **argv)
 {
@@ -160,5 +161,23 @@ int main(int argc, char **argv)
     return 0;
 	*/
 
+    const char * original = "The original string.";
 
+    // On duplique la chaîne de caractères initiale.
+    char * copy = ft_strdup( original );
+    
+    // On passe chaque lettre en majuscule.
+    char * ptr = copy;
+    while( *ptr != '\0' ) {
+        *ptr = toupper( *ptr );
+        ptr++;
+    }
+
+    // On affiche la chaîne finale
+    printf( "%s\n", copy );
+
+    // Sans oublier de libérer l'espace mémoire au final.
+    free( copy );
+
+    return EXIT_SUCCESS;
 }
