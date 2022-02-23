@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 21:12:36 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 09:49:39 by estarck          ###   ########.fr       */
+/*   Created: 2022/02/23 08:37:06 by estarck           #+#    #+#             */
+/*   Updated: 2022/02/23 08:45:01 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*str;
+	size_t	i;
 
-	str = (unsigned char *)s;
-	while (n > 0 && (*str != (unsigned char)c))
-	{
-		str++;
-		n--;
-	}
+	i = 0;
 	if (n == 0)
-		return (0x0);
-	else
-		return (str);
+		return (0);
+	while ((i < n) && s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	if (s2[i] == '\0')
+		return (s1[i]);
+	if (s1[i] == '\0')
+		return (-s2[i]);
+	return (0);
 }

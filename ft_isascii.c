@@ -6,13 +6,13 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:53:45 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/21 18:12:47 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 09:11:01 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }

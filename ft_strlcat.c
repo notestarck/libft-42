@@ -6,13 +6,13 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 19:00:39 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 19:05:46 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 09:49:57 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
