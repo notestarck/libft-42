@@ -6,9 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:01:55 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/21 17:44:02 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:24:09 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

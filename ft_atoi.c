@@ -6,9 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:36:34 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 16:52:33 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:24:09 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

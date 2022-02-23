@@ -6,9 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:02:35 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/22 09:02:05 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:24:09 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

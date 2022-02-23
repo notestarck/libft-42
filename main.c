@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 19:11:02 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:20:38 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,10 @@
 #include <ctype.h>
 #include <assert.h>
 #include <stdlib.h>
+#include "libft.h"
 
 #define INT_NUMBER 10
 
-size_t ft_strlen(char *str);
-void	*ft_memset(void *str, char c, int bytes);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-char 	*ft_strrchr(const char *s, int c);
-void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
-int		ft_atoi(const char *str);
-void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(const char *s1);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
 
 int main(int argc, char **argv)
 {
@@ -137,13 +123,13 @@ int main(int argc, char **argv)
 	return (0);
 	*/
 
-	/*
+	
 	char str[] = "Geek's Power !";
 	char c = 's';
-	printf("%p\n", ft_memchr(str, c, 8));
-	printf("%p", memchr(str, c, 8));
+	printf("%p\n", ft_memchr(str, c, 6));
+	printf("%p", memchr(str, c, 6));
 	return (0);
-	*/
+	
 
 	/*
 	int array1 [] = { 54, 85, 22, 63, 21 };
@@ -169,9 +155,11 @@ int main(int argc, char **argv)
 	return (0);	
 	*/
 
+	/*
 	char str1[] = "Coucou a tous ";
 	char str2[] = "les geeks !";
 	puts(ft_strjoin(str1, str2));
 	return (0);
+	*/
 
 }

@@ -6,9 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 20:11:18 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 16:43:21 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:24:09 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

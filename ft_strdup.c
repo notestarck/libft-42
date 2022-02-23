@@ -6,14 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 17:29:44 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 17:49:09 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 21:24:09 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(char *str);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
