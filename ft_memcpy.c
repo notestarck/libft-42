@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:43:24 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 08:55:02 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 10:46:40 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	void	*d;
+
+	d = dst;
 	while (n-- > 0)
-		*(char *)dst++ = *(char *)src++;
+		*(char *)d++ = *(char *)src++;
 	return (dst);
 }

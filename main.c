@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 09:44:40 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 13:41:39 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,25 +85,25 @@ int main(void)
 	puts("str1 before memcpy ");
 	puts(str1);
   
-	ft_memcpy (str1, str2, sizeof(str2));
+	ft_memcpy (str1, str2, 2);
   
 	puts("\nstr1 after memcpy ");
 	puts(str1);
-	printf("%p", memcpy (str1, str2, sizeof(str2)));
+	printf("%p", memcpy (str1, str2, 2));
 	*/
-
-	/*
-	char str1[] = "Geekspopo";  
+	 
+	
+	char str1[] = "salut tout le monde";  
 	char str2[] = "Quiz";  
   
 	puts("str1 before memmove ");
 	puts(str1);
   
-	ft_memmove (str1, str2, sizeof(str2));
+	ft_memmove (str1+6, str1, 2);
   
 	puts("\nstr1 after memmove ");
 	puts(str1);
- 	 */
+	return (0);
 
 	 /*
 	char c = '2';
@@ -127,9 +127,11 @@ int main(void)
 	return (0);
 	*/
 
+	/*
 	char str[] = "Geek's Power !";
 	char c = 's';
 	printf("%p\n", ft_memchr(str, c, 8));
 	printf("%p", memchr(str, c, 8));
 	return (0);
+	*/
 }
