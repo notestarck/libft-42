@@ -6,11 +6,11 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:36:34 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 16:40:41 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/23 16:43:13 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	j;
