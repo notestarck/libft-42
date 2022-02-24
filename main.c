@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/23 21:35:42 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 10:34:24 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,13 +123,13 @@ int main(int argc, char **argv)
 	return (0);
 	*/
 
-	
+	/*	
 	char str[] = "Geek's Power !";
 	char c = 's';
 	printf("%p\n", ft_memchr(str, c, 6));
 	printf("%p", memchr(str, c, 6));
 	return (0);
-	
+	*/
 
 	/*
 	int array1 [] = { 54, 85, 22, 63, 21 };
@@ -161,5 +161,11 @@ int main(int argc, char **argv)
 	puts(ft_strjoin(str1, str2));
 	return (0);
 	*/
+
+	char	str1[] = "   jjkkjhaCoucou tout le mondealkj   ";
+	char	set[] = "alh";
+	puts(ft_strtrim(str1, set));
+
+	return (0);
 
 }
