@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 15:35:27 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:56:46 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,12 +168,10 @@ int main(int argc, char **argv)
 	puts(ft_strtrim(str1, set));
 	*/
 
- /*
-	int	i = 0;
+	int	i = -2147483648;
 	puts(ft_itoa(i));
 
 	return (0);
-	*/
 
 	/*
 	const char str[] = "Bonjour tout le monde !";
