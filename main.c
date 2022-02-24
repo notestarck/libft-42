@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 10:34:24 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 10:47:26 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,7 +162,7 @@ int main(int argc, char **argv)
 	return (0);
 	*/
 
-	char	str1[] = "   jjkkjhaCoucou tout le mondealkj   ";
+	char	str1[] = "   jjkkjh-Coucou tout le monde-lkj   ";
 	char	set[] = "alh";
 	puts(ft_strtrim(str1, set));
 
