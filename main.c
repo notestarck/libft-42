@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 08:37:47 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 13:55:23 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 15:35:27 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,10 +175,13 @@ int main(int argc, char **argv)
 	return (0);
 	*/
 
+	/*
 	const char str[] = "Bonjour tout le monde !";
 	int c = '\0';
 	puts(ft_strchr(str, c));
 
 	return (0);
+	*/
 
+	
 }

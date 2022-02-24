@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 21:12:36 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 14:22:29 by estarck          ###   ########.fr       */
+/*   Created: 2022/02/24 14:22:51 by estarck           #+#    #+#             */
+/*   Updated: 2022/02/24 15:34:45 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	while (n > 0 && (*(unsigned char *)s != (unsigned char)c))
+	char	*dest;
+	int		i;
+
+	dest = ft_strdup(s);
+	i = 0;
+	while (dest[i])
 	{
-		s++;
-		n--;
+		dest [i] = f(i, s[i]);
+		i++;
 	}
-	if (n == 0)
-		return (0x0);
-	else
-		return ((void *)s);
+	return (dest);
+}
+
+char	ft_upchar(unsigned int i, char c)
+{
+	c -= 32;
+	return (c);
+}
+
+#include <stdio.h>
+
+int main(void)
+{
+	char const *str = "bonjour@les@enfants";
+	printf("%s", ft_strmapi(str, ft_upchar));
+	return (0);
 }

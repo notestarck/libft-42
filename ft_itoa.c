@@ -6,13 +6,13 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:05:31 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 13:32:35 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 14:01:31 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_len(int n)
+static int	ft_len(int n)
 {
 	int	l;
 

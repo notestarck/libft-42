@@ -6,13 +6,13 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:12:13 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 10:46:50 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/24 14:22:18 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_issep(char const *s1, char const *set)
+static int	ft_issep(char const *s1, char const *set)
 {
 	int	i;
 
