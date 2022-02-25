@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:06:18 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/24 22:28:43 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/25 13:15:42 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
+	size_t		i;
 	char	*d;
 
 	i = 0;
