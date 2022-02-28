@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:36:34 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/28 11:58:47 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/28 18:17:44 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
+	unsigned long	i;
 	int	j;
 	int	r;
 
