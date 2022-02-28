@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 16:52:43 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/25 13:24:02 by estarck          ###   ########.fr       */
+/*   Updated: 2022/02/25 15:12:29 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!dst && !src)
+		return (0);
 	if (dst > src)
 	{
 		while (len--)
