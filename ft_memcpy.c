@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:59:50 by estarck           #+#    #+#             */
-/*   Updated: 2022/03/01 09:36:30 by estarck          ###   ########.fr       */
+/*   Created: 2022/02/22 12:43:24 by estarck           #+#    #+#             */
+/*   Updated: 2022/03/01 20:11:26 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*r;
+	void	*d;
 
-	r = malloc(sizeof(char) * (len + 1));
-	if (r == 0x0)
-		return (0x0);
-	if (ft_strlen((char *)s) <= start)
-	{
-		r[0] = '\0';
-		return (r);
-	}
-	ft_strlcpy(r, s + start, len + 1);
-	return (r);
+	d = dst;
+	if (!dst && !src)
+		return (0);
+	while (n-- > 0)
+		*(char *)d++ = *(char *)src++;
+	return (dst);
 }

@@ -6,14 +6,14 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/03/01 11:40:39 by estarck          ###   ########.fr        #
+#    Updated: 2022/03/01 15:15:42 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
-SRCS	= $(wildcard srcs/*.c)
+SRCS	= $(wildcard *.c)
 OBJS	= ${SRCS:.c=.o}
-HEADER	= ./includes
+HEADER	= ./
 CFLAGS	= -Wall -Wextra -Werror
 CC		= gcc
 RM		= rm -f
