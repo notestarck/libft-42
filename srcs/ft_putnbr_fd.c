@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 11:44:54 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/28 18:00:36 by estarck          ###   ########.fr       */
+/*   Updated: 2022/03/01 10:04:21 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	n2;
+	long int	r;
 
-	n2 = n;
-	if (n2 < 0)
+	r = n;
+	if (r < 0)
 	{
-		n2 = (n2 * -1);
+		r = -r;
 		write(fd, "-", 1);
 	}
-	if (n2 > 9)
+	if (r > 9)
 	{
-		ft_putnbr_fd(n2 / 10, fd);
-		ft_putchar_fd((n2 % 10) + '0', fd);
+		ft_putnbr_fd(r / 10, fd);
+		ft_putchar_fd((r % 10) + '0', fd);
 	}
 	else
-		ft_putchar_fd(n2 + '0', fd);
+		ft_putchar_fd(r + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:36:34 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/28 18:17:44 by estarck          ###   ########.fr       */
+/*   Updated: 2022/03/01 11:36:04 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,26 @@
 
 int	ft_atoi(const char *str)
 {
-	unsigned long	i;
-	int	j;
-	int	r;
+	int						i;
+	int						s;
+	unsigned long long int	r;
 
 	i = 0;
-	j = 1;
 	r = 0;
+	s = 1;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	if (str[i] == '-')
-		j = -j;
 	if (str[i] == '-' || str[i] == '+')
-		i++;
+		if (str[i++] == '-')
+			s = -s;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		r = (r * 10) + (str[i] - '0');
 		i++;
 	}
-	return (r * j);
+	if (r > 9223372036854775807 && s < 0)
+		return (0);
+	if (r >= 9223372036854775807 && s > 0)
+		return (-1);
+	return (r * s);
 }
-
-/*mettre 0 ou -1 si le resultat est sup ou inf a la limite des int.
-A tester le 0 (negatif) ou le -1 (positif) en fonction de la vraie fonction.*/
-//tester limite negative des int. peut etre avec une long.
-//encore a corriger ou pas

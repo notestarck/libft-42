@@ -6,7 +6,7 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/02/25 13:23:07 by estarck          ###   ########.fr        #
+#    Updated: 2022/03/01 11:40:39 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ RM		= rm -f
 .c.o:
 			${CC} ${CFLAGS} -I${HEADER} -c $< -o ${<:.c=.o}
 
-libft.a:	${OBJS}	
+$(NAME):	${OBJS}	
 			ar rc $(NAME) ${OBJS}
 
 all:		${NAME}

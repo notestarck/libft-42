@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:05:31 by estarck           #+#    #+#             */
-/*   Updated: 2022/03/01 09:21:16 by estarck          ###   ########.fr       */
+/*   Updated: 2022/03/01 12:26:43 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,8 @@ static int	ft_len(long n)
 	return (l);
 }
 
-char	*ft_itoa(int n)
+static char	*ft_writedest(char *dest, long nb, int i)
 {
-	char	*dest;
-	int		i;
-	long	nb;
-
-	nb = n;
-	i = ft_len(nb);
-	dest = (char *)malloc(sizeof(char) * i + 1);
-	if (dest == 0x0)
-		return (0x0);
-	dest[i--] = '\0';
 	if (nb == 0)
 		dest[0] = '0';
 	if (nb < 0)
@@ -55,5 +45,23 @@ char	*ft_itoa(int n)
 		nb = nb / 10;
 		i--;
 	}
+	return (dest);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*dest;
+	int		i;
+	long	nb;
+
+	nb = n;
+	i = ft_len(nb);
+	if (nb == 0)
+		i = 1;
+	dest = (char *)malloc(sizeof(char) * i + 1);
+	if (dest == 0x0)
+		return (0x0);
+	dest[i--] = '\0';
+	ft_writedest(dest, nb, i);
 	return (dest);
 }
