@@ -6,15 +6,15 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 10:37:27 by estarck           #+#    #+#             */
-/*   Updated: 2022/02/25 11:22:36 by estarck          ###   ########.fr       */
+/*   Updated: 2022/03/02 16:49:58 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_countwords(char const *s, char c);
-int		ft_len(char const *s, char c);
-int		ft_issep(char const *s, char c);
+static int	ft_countwords(char const *s, char c);
+static int	ft_len(char const *s, char c);
+static int	ft_issep(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -44,7 +44,7 @@ char	**ft_split(char const *s, char c)
 	return (dest);
 }
 
-int	ft_countwords(char const *s, char c)
+static int	ft_countwords(char const *s, char c)
 {
 	int	i;
 	int	cw;
@@ -63,7 +63,7 @@ int	ft_countwords(char const *s, char c)
 	return (cw);
 }
 
-int	ft_len(char const *s, char c)
+static int	ft_len(char const *s, char c)
 {
 	int	l;
 
@@ -76,7 +76,7 @@ int	ft_len(char const *s, char c)
 	return (l);
 }
 
-int	ft_issep(char const *s, char c)
+static int	ft_issep(char const *s, char c)
 {
 	if (*s == c)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 19:33:15 by estarck           #+#    #+#             */
-/*   Updated: 2022/03/01 20:19:57 by estarck          ###   ########.fr       */
+/*   Updated: 2022/03/02 11:56:42 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	lst = (ft_lstlast(*lst));
-	(*new).next = *lst;
-	lst = new;
+	t_list	*tmp;
+
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = (ft_lstlast(*lst));
+	(*tmp).next = new;
 }
-// a finir

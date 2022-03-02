@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 17:59:50 by estarck           #+#    #+#             */
-/*   Updated: 2022/03/02 17:05:47 by estarck          ###   ########.fr       */
+/*   Created: 2022/03/02 13:59:57 by estarck           #+#    #+#             */
+/*   Updated: 2022/03/02 15:46:15 by estarck          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*r;
+	t_list	*dst;
+	t_list	*tmp;
 
-	if (ft_strlen((char *)s) <= start)
-	{
-		r = (char *)malloc(sizeof(char) * 1);
-		if (r == 0x0)
-			return (0x0);
-		r[0] = '\0';
-		return (r);
-	}
-	r = (char *)malloc(sizeof(char) * (len + 1));
-	if (r == 0x0)
+	dst = 0x0;
+	tmp = 0x0;
+	if (lst == 0x0)
 		return (0x0);
-	ft_strlcpy(r, s + start, len + 1);
-	return (r);
+	while (lst)
+	{
+		tmp = ft_lstnew(f((*lst).content));
+		if (tmp == 0x0)
+		{
+			ft_lstclear(&tmp, del);
+			break ;
+		}
+		ft_lstadd_back(&dst, tmp);
+		lst = (*lst).next;
+	}
+	ft_lstclear(&lst, del);
+	return (dst);
 }
