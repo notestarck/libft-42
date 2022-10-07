@@ -6,7 +6,7 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/10/06 11:23:51 by estarck          ###   ########.fr        #
+#    Updated: 2022/10/07 08:50:47 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ SRCS		=	$(patsubst %,$(SDIR)/%,$(_SRCS))
 ODIR		=	./objs
 _OBJS		=	${_SRCS:.c=.o}
 OBJS		=	$(patsubst %,$(ODIR)/%,$(_OBJS))
-MAKEOBJS	=	if [ -d objs ]; then :; else mkdir objs; fi
+MKODIR		=	if [ -d objs ]; then :; else mkdir objs; fi
+RMODIR		=	if [ -d objs ]; then rmdir objs; else :; fi
 
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
@@ -94,14 +95,14 @@ $(NAME)		:	${OBJS}
 				@echo "$(_GREEN)$(_BOLD)End of the compilation libft.a$(_END)"
 
 $(ODIR)/%.o	:	$(SDIR)/%.c
-				@$(MAKEOBJS)
+				@$(MKODIR)
 				@echo "$(_BLUE)Compiling libft.a in progress... $<$(_END)"
 				@$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
 
 clean		:
 				@echo "$(_YELLOW)Deleting .o files$(_END)"
 				@${RM} ${OBJS} ${OBJS_B}
-				@if [ -d objs ]; then rmdir objs; else :; fi
+				@$(RMODIR)
 
 fclean		:	clean
 				@echo "$(_RED)$(_BOLD)Remove libft.a$(_END)"
