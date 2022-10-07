@@ -6,7 +6,7 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/10/07 08:50:47 by estarck          ###   ########.fr        #
+#    Updated: 2022/10/07 11:56:02 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,12 +67,16 @@ OBJS		=	$(patsubst %,$(ODIR)/%,$(_OBJS))
 MKODIR		=	if [ -d objs ]; then :; else mkdir objs; fi
 RMODIR		=	if [ -d objs ]; then rmdir objs; else :; fi
 
+DELOBJS		=	echo "$(_YELLOW)Deleting .o files libft$(_END)"
+DELLIB		=	echo "$(_RED)$(_BOLD)Remove libft.a$(_END)"
+
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -f
 
 # Formatting
+_RETURN		=	$'\33[2K\r
 _END		=	$'\x1b[0m
 _BOLD		=	$'\x1b[1m
 _UNDER		=	$'\x1b[4m
@@ -92,21 +96,24 @@ all			:	${NAME}
 
 $(NAME)		:	${OBJS}	
 				@ar rc $(NAME) ${OBJS}
-				@echo "$(_GREEN)$(_BOLD)End of the compilation libft.a$(_END)"
+				@echo "\n$(_GREEN)$(_BOLD)End of the compilation libft.a$(_END)"
 
 $(ODIR)/%.o	:	$(SDIR)/%.c
 				@$(MKODIR)
-				@echo "$(_BLUE)Compiling libft.a in progress... $<$(_END)"
+				@printf "$(_RETURN)$(_BLUE)Compiling libft.a in progress... $<$(_END)"
 				@$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
 
 clean		:
-				@echo "$(_YELLOW)Deleting .o files$(_END)"
-				@${RM} ${OBJS} ${OBJS_B}
-				@$(RMODIR)
+				@if [ -d objs ]; \
+					then ${RM} ${OBJS} ${OBJS_B} && $(DELOBJS) && $(RMODIR); \
+					else echo "$(_GREEN)Already clean .o files libft$(_END)"; \
+				fi
 
 fclean		:	clean
-				@echo "$(_RED)$(_BOLD)Remove libft.a$(_END)"
-				@${RM} ${NAME}	
+				@if [ -f ./libft.a ]; \
+					then ${RM} ${NAME} && $(DELLIB); \
+					else echo "$(_GREEN)Already remove libft.a$(_END)"; \
+				fi
 
 re			:	fclean all
 
