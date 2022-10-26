@@ -67,8 +67,8 @@ OBJS		=	$(patsubst %,$(ODIR)/%,$(_OBJS))
 MKODIR		=	if [ -d objs ]; then :; else mkdir objs; fi
 RMODIR		=	if [ -d objs ]; then rmdir objs; else :; fi
 
-DELOBJS		=	echo "$(_YELLOW)Deleting .o files libft$(_END)"
-DELLIB		=	echo "$(_RED)$(_BOLD)Remove libft.a$(_END)"
+DELOBJS		=	echo "$(_YELLOW)Deleting .o files $(NAME)$(_END)"
+DELLIB		=	echo "$(_RED)$(_BOLD)Remove $(NAME)$(_END)"
 
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
@@ -96,23 +96,23 @@ all			:	${NAME}
 
 $(NAME)		:	${OBJS}	
 				@ar rc $(NAME) ${OBJS}
-				@echo "\n$(_GREEN)$(_BOLD)End of the compilation libft.a$(_END)"
+				@echo "\n$(_GREEN)$(_BOLD)End of the compilation $(NAME)$(_END)"
 
 $(ODIR)/%.o	:	$(SDIR)/%.c
 				@$(MKODIR)
-				@printf "$(_RETURN)$(_BLUE)Compiling libft.a in progress... $<$(_END)"
+				@printf "$(_RETURN)$(_BLUE)Compiling $(NAME) in progress... $<$(_END)"
 				@$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
 
 clean		:
 				@if [ -d objs ]; \
-					then ${RM} ${OBJS} ${OBJS_B} && $(DELOBJS) && $(RMODIR); \
-					else :; \
+					then ${RM} ${OBJS} && $(DELOBJS) && $(RMODIR); \
+					else echo "$(_GREEN)Already remove .o files$(_END)"; \
 				fi
 
 fclean		:	clean
-				@if [ -f ./libft.a ]; \
+				@if [ -f ./$(NAME) ]; \
 					then ${RM} ${NAME} && $(DELLIB); \
-					else echo "$(_GREEN)Already remove libft.a$(_END)"; \
+					else echo "$(_GREEN)Already remove $(NAME)$(_END)"; \
 				fi
 
 re			:	fclean all
