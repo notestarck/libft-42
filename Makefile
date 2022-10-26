@@ -6,7 +6,7 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/10/07 12:17:18 by estarck          ###   ########.fr        #
+#    Updated: 2022/10/26 11:51:13 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ all			:	${NAME}
 
 $(NAME)		:	${OBJS}	
 				@ar rc $(NAME) ${OBJS}
-				@echo "\n$(_GREEN)$(_BOLD)End of the compilation $(NAME)$(_END)"
+				@echo "\n$(_GREEN)$(_BOLD)$(NAME) is compiled$(_END)"
 
 $(ODIR)/%.o	:	$(SDIR)/%.c
 				@$(MKODIR)
@@ -106,7 +106,7 @@ $(ODIR)/%.o	:	$(SDIR)/%.c
 clean		:
 				@if [ -d objs ]; \
 					then ${RM} ${OBJS} && $(DELOBJS) && $(RMODIR); \
-					else echo "$(_GREEN)Already remove .o files$(_END)"; \
+					else echo "$(_GREEN)Already clean .o files $(NAME)$(_END)"; \
 				fi
 
 fclean		:	clean
