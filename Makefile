@@ -6,13 +6,13 @@
 #    By: estarck <estarck@student.42mulhouse.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 21:25:34 by estarck           #+#    #+#              #
-#    Updated: 2022/10/07 11:56:02 by estarck          ###   ########.fr        #
+#    Updated: 2022/10/07 12:17:18 by estarck          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 	
-INCLUDES		=	-I./includes
+INCLUDES	=	-I./includes
 
 SDIR		=	./srcs
 _SRCS		= 	ft_atoi.c \
@@ -106,7 +106,7 @@ $(ODIR)/%.o	:	$(SDIR)/%.c
 clean		:
 				@if [ -d objs ]; \
 					then ${RM} ${OBJS} ${OBJS_B} && $(DELOBJS) && $(RMODIR); \
-					else echo "$(_GREEN)Already clean .o files libft$(_END)"; \
+					else :; \
 				fi
 
 fclean		:	clean
